@@ -23,7 +23,6 @@ class Messages extends Migration
             $table->string('fileone')->nullable();
             $table->string('filetwo')->nullable();
             $table->longText('message');
-
         });
     }
 
@@ -34,6 +33,6 @@ class Messages extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('messages');
     }
 }

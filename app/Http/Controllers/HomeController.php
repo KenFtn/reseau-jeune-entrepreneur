@@ -12,7 +12,8 @@ class HomeController extends Controller
         return view ('index', compact('posts'));
     }
 
-    public function store(Request $request){
-        
+    public function store(Request $request)
+    {
+
     }
 }
