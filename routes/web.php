@@ -14,6 +14,6 @@
 Route::get('/', 'HomeController@index');
 
 
-Route::group(['prefix' => 'admin'], function () {
+Route::group(['prefix' => 'gautreseau'], function () {
     Voyager::routes();
 });

@@ -11,4 +11,8 @@ class HomeController extends Controller
         $posts = Post::all()->sortByDesc('created_at')->take(8);
         return view ('index', compact('posts'));
     }
+
+    public function store(Request $request){
+        
+    }
 }
