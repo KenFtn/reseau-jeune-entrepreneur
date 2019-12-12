@@ -152,7 +152,7 @@ return [
     ],
     'multilingual' => [
         'enabled' => true,
-        'default' => 'fr',
+        'default' => 'en',
         'locales' => [
             'en',
             'da',

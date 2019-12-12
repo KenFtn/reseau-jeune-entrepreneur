@@ -1,0 +1,78 @@
+// Styling for the services section
+.service-heading {
+  margin: 15px 0;
+  text-transform: none;
+}
+
+.explain {
+  @include flex(row, space-evenly, center);
+  padding : 0 5%;
+  .rond
+  {
+      position : relative;
+      @include flex(row, center, center);
+      border-radius: 50%;
+      height : 380px;
+      width : 380px;
+      font-weight: bold;
+      border-radius : 50%;
+      overflow: hidden;
+      text-align: center;
+      margin-left : 5px;
+      padding-left : 5px;
+      background-position: center;
+      p{
+        color:white;
+        background-color: rgba(0,0,0,0.5);
+        width: 75%;
+      }
+  }
+  .rond:before,
+  .rond:after {
+      @include flex(row, center, center);
+      position: absolute;
+      content: '';
+  }
+  
+  
+  .image-qst-1 {
+    background-image: url(../img/faq/brooke-cagle--uHVRvDr7pg-unsplash.jpg);
+    background-size: cover;
+  }
+  
+  .image-qst-3 {
+    background-image: url(../img/faq/annie-spratt-QckxruozjRg-unsplash.jpg);
+    background-size: cover;
+  }
+  
+  .image-qst-2 {
+    background-image: url(../img/faq/austin-distel-jpHw8ndwJ_Q-unsplash.jpg);
+    background-size: cover;
+  }
+}
+.bulle-reponse {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  // border: 1px solid #dbdbdb;
+  border-radius: 5px;
+  background: white;
+  z-index: 14;
+  padding: 0 30px;
+  position: relative;
+  transition: .5s;
+  margin-top: 30px;
+  height: 300px;
+  text-align: justify;
+  box-shadow: 0px 0px 57px -17px rgba(0,0,0,0.30);
+
+  p {
+      margin: 0;
+  }
+}
+
+.qst{
+  width: 30%;
+  @include flex(column, center, center);
+}
