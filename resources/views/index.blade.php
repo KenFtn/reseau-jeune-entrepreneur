@@ -14,8 +14,8 @@
   <!-- Custom styles for this template -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    
 
 </head>
 
@@ -28,7 +28,6 @@
         <img src={{ asset("img/logos/Logo-RJE-long-Transparent.png")}} alt="Logo Réseau Jeunes Entrepreneurs">
       </a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
         <i class="fas fa-bars"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -43,7 +42,7 @@
             <a class="nav-link js-scroll-trigger" href="#about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#team">Team</a>
+            <a class="nav-link js-scroll-trigger" href="#team">Newsletter</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
@@ -78,7 +77,7 @@
           <p>Qu’est-ce que le Réseau Jeunes Entrepreneur-es ?</p>
         </div>
 
-        <div class="bulle-reponse">
+        <div class="bulle-reponse shadow">
           <p>
             Ce réseau a été créé en 2019 par Gautier Decroix, CEO de <em>Your Party</em>. Collaborant dans un premier temps sur les secteurs de Lille, Calais et Dunkerque, il a pour but d’aider les
             jeunes de 14 à 26 ans ayant une ébauche d'entreprise en tête (ou même un début de projet) et leur permettre de concrétiser
@@ -92,7 +91,7 @@
           <p>Que propose le Réseau Jeunes Entrepreneur-es ?</p>
         </div>
 
-        <div class="bulle-reponse">
+        <div class="bulle-reponse shadow">
           <p>
             Au sein du réseau, nous vous proposons un suivi de dossier sur-mesure selon vos contraintes. Vous
             aurez également la possibilité de rencontrer différents chefs d’entreprises qui pourront vous conseiller sur vos projets. Nous nous engageons à vous faire avancer en vous mettant en relation avec les bons interlocuteurs et vous faire gagner du temps.
@@ -106,7 +105,7 @@
             <p>Quel est le but du Réseau Jeunes Entrepreneur-es ?</p>
         </div>
 
-        <div class="bulle-reponse">
+        <div class="bulle-reponse shadow">
           <p>
             Nous avons pour ambition de devenir un réseau national et de gagner en notoriété afin d'être une référence pour les jeunes dont le désir est d'entreprendre et de créer.
             Nous envisageons de faire bouger les choses sur le plan juridique dans le but de permettre aux jeunes de créer
@@ -468,7 +467,7 @@
       </div>
 
   @endforeach
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <!-- Isotope -->
   <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
   <script>
@@ -485,6 +484,7 @@
   <script>
         AOS.init();
     </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.js"></script>
 
 </body>
 

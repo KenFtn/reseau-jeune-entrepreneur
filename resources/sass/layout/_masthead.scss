@@ -2,10 +2,10 @@
 header.masthead {
   text-align: center;
   color: white;
-  background-image: url('../img/header-bg.jpg');
+  background-image: url('../img/header-bg3.jpg');
   background-repeat: no-repeat;
   background-attachment: scroll;
-  background-position: center center;
+  background-position: center 60%;
   background-size: cover;
   .intro-text {
     padding-top: 150px;
@@ -17,12 +17,19 @@ header.masthead {
       margin-bottom: 25px;
     }
     .intro-heading {
-      font-size: 50px;
+      font-size: 37px;
       font-weight: 700;
       line-height: 50px;
       margin-bottom: 25px;
     }
   }
+}
+.masthead::after{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0,0,0,.2);
 }
 @media(min-width:768px) {
   header.masthead {
