@@ -14,6 +14,16 @@ class HomeController extends Controller
 
     public function store(Request $request)
     {
-
+        dd($request);
+        $data = Message::create([
+            'type' => $request->type,
+            'firstname' => $request->nameContact,
+            'lastname' => $request->lastnameContact,
+            'title' => $request->titleProject,
+            'email' => $request->emainContact,
+            'fileone' => $request->fileProject1,
+            'filetwo' => $request->fileProject2,
+            'message' => $request->messageContact,
+        ]);
     }
 }

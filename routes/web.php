@@ -12,7 +12,7 @@
 */
 
 Route::get('/', 'HomeController@index');
-Route::post('/form', 'HomeController@store');
+Route::post('/form', 'HomeController@store')->name('form');
 
 
 Route::group(['prefix' => 'gautreseau'], function () {

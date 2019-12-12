@@ -237,11 +237,8 @@
           <h3 class="section-subheading text-muted">Restez au courant de toute les informations sur le réseau ! </h3>
         </div>
       </div>
-      <form id="newsletter" name="sentMessage">
-        <input class="form-control" id="email" name="emailnewsletter" type="email" placeholder="Email *" required="required"
-        <p class="help-block text-danger"></p>
-      </form>
     </div>
+    <iframe width="800" height="500" src="https://a50fc341.sibforms.com/serve/MUIEAIOpVUOWJ8dqaL7X2-JGfcU6FFPZek_V0IeA9ZT5xyeClZzRkvGBXSpuH8cZ804UBbHhNznKD5pnYJcNclz83bzO8I9Z-H1f9WIAokcXMgrbpXfNa1ha2eqzK_ctfVV-Y4R0Y0iWc1T2F-4e1iFvPejEhrscNMpBJ-IlDIG2fo-DN7zasZ-3FwLeyKC4UXylASJIV80Fv4Ta" frameborder="0" scrolling="auto" allowfullscreen style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;"></iframe>
     </section>
   <!-- Contact -->
   <section class="page-section" id="contact">
@@ -263,7 +260,9 @@
   </div>
   <div class="row">
     <div class="col-lg-12">
-      <form id="contactForm" name="sentMessage" novalidate="novalidate">
+      <form id="contactForm" name="sentMessage" novalidate="novalidate" action={{route('form')}} method='POST'>
+          @csrf
+          @method('POST')
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
@@ -279,6 +278,7 @@
               <p class="help-block text-danger"></p>
             </div>
           </div>
+          <input type='hidden' name='type' value='contact'>
           <div class="col-md-6">
             <div class="form-group">
               <textarea class="form-control" id="message" name="messageContact" placeholder="Votre Message *" required="required" data-validation-required-message="Rédigez votre message."></textarea>
@@ -305,7 +305,9 @@
   </div>
   <div class="row">
     <div class="col-lg-12">
-      <form id="contactForm" name="sentMessage" novalidate="novalidate">
+      <form id="contactForm" name="sentMessage" novalidate="novalidate" action={{route('form')}} method='POST'>
+        @csrf
+        @method('POST')
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
@@ -327,15 +329,15 @@
               <p class="help-block text-danger"></p>
             </div>
             <div class="form-group">
-              <input class="form-control" type="file" name="fileProject" multiple required="required" data-validation-required-message="Selectionnez un document.">
+              <input class="form-control" type="file" name="fileProject1" multiple required="required" data-validation-required-message="Selectionnez un document.">
               <p class="help-block text-danger"></p>
             </div>
             <div class="form-group">
-              <input class="form-control" type="file" name="fileProject" multiple>
+              <input class="form-control" type="file" name="fileProject2" multiple>
               <p class="help-block text-danger"></p>
             </div>
           </div>
-
+          <input type='hidden' name='type' value='project'>
           <div class="clearfix"></div>
           <div class="col-lg-12 text-center">
             <div id="success"></div>
@@ -356,7 +358,9 @@
   </div>
   <div class="row">
     <div class="col-lg-12">
-      <form id="contactForm" name="sentMessage" novalidate="novalidate">
+      <form id="contactForm" name="sentMessage" novalidate="novalidate" action={{route('form')}} method='POST'>
+          @csrf
+          @method('POST')
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
@@ -378,6 +382,7 @@
               <p class="help-block text-danger"></p>
             </div>
           </div>
+          <input type='hidden' name='type' value='entreprise'>
           <div class="clearfix"></div>
           <div class="col-lg-12 text-center">
             <div id="success"></div>

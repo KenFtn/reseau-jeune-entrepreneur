@@ -12193,6 +12193,10 @@ section#contact :-ms-input-placeholder {
   color: #ced4da;
 }
 
+.element-item {
+  left: 0 !important;
+}
+
 .footer {
   padding: 25px 0;
   text-align: center;

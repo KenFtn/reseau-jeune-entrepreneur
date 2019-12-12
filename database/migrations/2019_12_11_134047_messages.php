@@ -15,6 +15,8 @@ class Messages extends Migration
     {
         Schema::create('messages', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('type');
+            $table->string('title')->nullable();
             $table->string('firstname');
             $table->string('lastname');
             $table->string('email');
