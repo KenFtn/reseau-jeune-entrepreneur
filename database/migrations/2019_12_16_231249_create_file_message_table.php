@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Messages extends Migration
+class CreateFileMessageTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,13 @@ class Messages extends Migration
      */
     public function up()
     {
-        Schema::create('messages', function (Blueprint $table) {
+        Schema::create('file_message', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('type');
-            $table->string('firstname');
-            $table->string('lastname');
-            $table->string('email');
-            $table->string('project_name')->nullable();
+            $table->bigInteger('file_id')->unsigned();
+            $table->bigInteger('message_id')->unsigned();
             $table->timestamps();
-            $table->longText('message')->nullable();
+            $table->foreign('file_id')->references('id')->on('files');
+            $table->foreign('message_id')->references('id')->on('messages');
         });
     }
 
@@ -32,6 +30,6 @@ class Messages extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('messages');
+        Schema::dropIfExists('file_message');
     }
 }
